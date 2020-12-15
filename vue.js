@@ -14,6 +14,13 @@ function hljsDefineVue(hljs) {
         relevance: 10,
       }),
       {
+        begin: /^(\s*)(<template>)/gm,
+        end: /^(\s*)(<\/template>)/gm,
+        subLanguage: "html",
+        excludeBegin: true,
+        excludeEnd: true,
+      },
+      {
         begin: /^(\s*)(<script>)/gm,
         end: /^(\s*)(<\/script>)/gm,
         subLanguage: "javascript",
